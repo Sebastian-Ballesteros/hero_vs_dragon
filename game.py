@@ -4,13 +4,16 @@ import random
 # Please read into the variables below the correct numbers. Use try and except to catch error.
 # a simple example would be:
 # hero_hp = int(input("how many hp does the hero have?"))
-try:
-    hero_hp = int(input("how many hp does the hero have? "))
-    dragon_hp = int(input("how many hp does the dragon have? "))
-    hero_max_dmg = int(input("What is the hero's max damage "))
-    dragon_max_dmg = int(input("What is the dragon's max damage"))
-except ValueError:
-    print("Please enter an integer")
+while True:
+    try:
+        hero_hp = int(input("how many hp does the hero have? "))
+        dragon_hp = int(input("how many hp does the dragon have? "))
+        hero_max_dmg = int(input("What is the hero's max damage "))
+        dragon_max_dmg = int(input("What is the dragon's max damage"))
+        break
+    except ValueError:
+        print("Please enter an integer")
+
 
 print("The dragon with", dragon_hp, "hp attacks out hero with", hero_hp, "hp")
 
